@@ -11,14 +11,13 @@
 }
 
 .contact-form__content {
-    background-color: #3CB371;
     margin: 0 auto;
     padding: 30px 15px;
     max-width: 690px;
 }
 
 .contact-form__heading {
-    margin-bottom: 0px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
@@ -30,7 +29,6 @@
 
 .form__group {
     display: flex;
-    background-color: salmon;
     align-items: center;
     justify-content: space-between;
 }
@@ -39,67 +37,64 @@
     font-weight: bold;
 }
 
-.form__label--item{
-    background-color: azure;
-}
-
 .form__label--required {
     color: #ff0000;
 }
 
-.form__group-content{
+.form__group-content {
     display: flex;
     flex-direction: column;
 }
 
-.form__input--text input{
+.form__input--text input {
     border: 2px solid #ddd;
     border-radius: 3px;
     margin-right: 7px;
 }
 
-.form__input--name{
-    padding: 10px 10px;
+.form__input--name {
+    padding: 10px;
     width: 250px;
 }
 
-.form__input-example{
+.form__input-example {
     color: #ddd;
     text-align: left;
     padding: 0px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
-.form__input-example--last-name{
+.form__input-example--last-name {
     margin: 2px 0 0 165px;
 }
 
-.form__input-example--first-name{
+.form__input-example--first-name {
     margin: 2px 0 0 195px;
 }
 
-.form__input--radio{
+.form__input--radio {
     display: flex;
     margin-right: 365px;
 }
 
-.form__radio--item{
+.form__radio--item {
     position: relative;
     display: block;
-    margin: 5px 0;
+    margin: 5px 0 5px 0px;
     cursor: pointer;
 }
 
-.form__radio--custom{
+.form__radio--custom {
     display: none;
 }
 
-.form__radio--man{
+.form__radio--man {
     position: absolute;
-    right: 60px;
-    height: 24px;
-    width: 24px;
-    border: solid 2px blue;
+    right: 90px;
+    top: -17px;
+    height: 35px;
+    width: 35px;
+    border: solid 1px #ddd;
     border-radius: 50%;
     background-color: #fff;
     margin-right: 30px;
@@ -108,24 +103,153 @@
 .form__radio--man:after {
     content: "";
     position: absolute;
-    background: red;
+    background: #000;
     border-radius: 50%;
-    top: 2px;
+    top: 9px;
     bottom: 2px;
-    left: 2px;
+    left: 9px;
     right: 2px;
+    height: 15px;
+    width: 15px;
     opacity: 0;
 }
 
-.form__radio--man-text{
-    text-align: ;
-    padding-right: ;
+.form__radio--man-text {
+    position: absolute;
+    top: -28px;
+    right: 60px;
+    width: 50px;
 }
 
 
+.form__radio--woman {
+    position: absolute;
+    top: -17px;
+    right: -50px;
+    height: 35px;
+    width: 35px;
+    border: solid 1px #ddd;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 30px;
+}
 
-label{
-    width: ;
-    margin-left: 300px;
-    background-color: #ff0000;
+.form__radio--woman:after {
+    content: "";
+    position: absolute;
+    background: #000;
+    border-radius: 50%;
+    top: 9px;
+    bottom: 2px;
+    left: 9px;
+    right: 2px;
+    opacity: 0;
+    width: 15px;
+    height: 15px;
+}
+
+.form__radio--woman-text {
+    position: absolute;
+    top: -28px;
+    left: 30px;
+    width: 50px;
+}
+
+.form__radio--custom:checked+.form__radio--man:after {
+    opacity: 1;
+}
+
+.form__radio--custom:checked+.form__radio--woman:after {
+    opacity: 1;
+}
+
+.form__email-title {
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.form__input--email {
+    padding: 10px;
+    width: 510px;
+    margin-top: 50px;
+}
+
+.form__input-example--email {
+    margin: 2px 0 0 165px;
+}
+
+.form__label--item {
+    font-weight: bold;
+}
+
+.form__label--required {
+    font-weight: bold;
+}
+
+.form__input--post-text {
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.form__input--post {
+    padding: 10px;
+    width: 480px;
+}
+
+.form__input-example--post {
+    margin: 2px 0 0 195px;
+}
+
+.form__input--address {
+    padding: 10px;
+    width: 510px;
+}
+
+.form__input-example--address {
+    margin: 2px 0 0 160px;
+}
+
+.form__input--building-name {
+    padding: 10px;
+    width: 510px;
+}
+
+.form__input-example--building-name {
+    margin: 2px 0 0 160px;
+}
+
+.form__input--textarea textarea {
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    margin-right: 7px;
+    width: 510px;
+    resize: none;
+}
+
+.form__label--text {
+    font-weight: bold;
+    position: relative;
+    top: -50px;
+}
+
+.form__label--required-opinion {
+    font-weight: bold;
+    color: #ff0000;
+    position: relative;
+    top: -50px;
+}
+
+.form__button {
+    margin-top: 30px;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
 }
