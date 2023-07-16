@@ -1,34 +1,22 @@
-* {
-    box-sizing: border-box;
-}
-
-*::before {
-    box-sizing: border-box;
-}
-
-*::after {
-    box-sizing: border-box;
-}
-
 .confirm__content {
     margin: 0 auto;
-    padding: 30px 15px;
     max-width: 690px;
+    padding: 30px 15px;
 }
 
 .confirm__heading {
-    text-align: center;
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .form {
-    width: 100%;
     text-align: center;
+    width: 100%;
 }
 
 .form__group {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
 }
@@ -38,31 +26,34 @@
 }
 
 .form__input--last-name {
-    padding: 10px;
-    width: 76px;
+    border: none;
     border: 2px solid #ddd;
     border-radius: 3px;
+    cursor: default;
     margin-right: 7px;
-    border: none;
     outline: none;
+    padding: 10px;
+    width: 76px;
 }
 
 .form__input--first-name {
-    padding: 10px;
-    width: 421px;
+    border: none;
     border: 2px solid #ddd;
     border-radius: 3px;
+    cursor: default;
     margin-right: 7px;
-    border: none;
     outline: none;
+    padding: 10px;
+    width: 421px;
 }
 
 .form__input--text input {
+    border: none;
+    cursor: default;
+    margin-right: 7px;
+    outline: none;
     padding: 10px;
     width: 510px;
-    border: none;
-    outline: none;
-    margin-right: 7px;
 }
 
 .form__input--textarea {
@@ -70,10 +61,10 @@
 }
 
 .form__input--textarea {
-    margin-right: 7px;
-    width: 510px;
     height: 200px;
+    margin-right: 7px;
     resize: none;
+    width: 510px;
 }
 
 .form__input--opinion {
@@ -83,7 +74,17 @@
 .form__label--text {
     font-weight: bold;
     position: relative;
-    top: -75px;
+    top: -85px;
+}
+
+.form__input--textarea textarea {
+    border: none;
+    cursor: default;
+    margin-right: 47px;
+    outline: none;
+    padding: 10px;
+    resize: none;
+    width: 470px;
 }
 
 .form__button {
@@ -91,21 +92,21 @@
 }
 
 .form__button-submit {
-    padding: 10px;
-    width: 150px;
-    height: 50px;
+    background-color: #000;
     border: none;
     border-radius: 3px;
-    background-color: #000;
     color: #fff;
     cursor: pointer;
+    height: 50px;
+    padding: 10px;
+    width: 150px;
 }
 
 .form__button-submit--fix {
     background-color: #fff;
     border: none;
-    outline: none;
     border-bottom: 1px solid #000;
     height: 18px;
+    outline: none;
     width: 66px;
 }
