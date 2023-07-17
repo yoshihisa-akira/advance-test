@@ -18,10 +18,21 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input class="form__input--name" type="text" name="lastName" maxlength="4">
-                    <input class="form__input--name" type="text" name="firstName">
+                    <input class="form__input--name" type="text" name="lastName" value="{{ old('lastName') }}" maxlength="4">
+                    <input class="form__input--name" type="text" name="firstName" value="{{ old('firstName') }}">
                 </div>
-                <div class="form__error"><p class="test">aaa</p></div>
+                <div class="form__error--name">
+                    <div class="form__error--lastName">
+                        @error('lastName')
+                        {{ $message }}
+                        @enderror
+                    </div>
+                    <div class="form__error--firstName">
+                        @error('firstName')
+                        {{ $message }}
+                        @enderror
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -37,15 +48,20 @@
             <div class="form__group-content">
                 <div class="form__input--radio">
                     <label class="form__radio--item">
-                        <input class="form__radio--custom" type="radio" name="gender" value="男性" checked>
+                        <input class="form__radio--custom" type="radio" name="gender" value="1" checked>
                         <span class="form__radio--man"></span>
                         <p class="form__radio--man-text">男性</p>
                     </label>
                     <label class="form__radio--item">
-                        <input class="form__radio--custom" type="radio" name="gender" value="女性">
+                        <input class="form__radio--custom" type="radio" name="gender" value="2">
                         <span class="form__radio--woman"></span>
                         <p class="form__radio--woman-text">女性</p>
                     </label>
+                </div>
+                <div class="form__error">
+                    @error('gender')
+                    {{ $message }}
+                    @enderror
                 </div>
             </div>
         </div>
@@ -56,7 +72,12 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="email" class="form__input--email" name="email">
+                    <input type="email" class="form__input--email" name="email" value="{{ old('email') }}">
+                </div>
+                <div class="form__error">
+                    @error('email')
+                    {{ $message }}
+                    @enderror
                 </div>
             </div>
         </div>
@@ -71,7 +92,12 @@
             <div class="form__group-content">
                 <div class="form__input--text">
                     <span class="form__input--post-text">〒</span>
-                    <input type="text" maxlength="8" class="form__input--post" name="post">
+                    <input type="text" maxlength="8" class="form__input--post" name="postcode" value="{{ old('postcode')  }}">
+                </div>
+                <div class="form__error">
+                    @error('postcode')
+                    {{ $message }}
+                    @enderror
                 </div>
             </div>
         </div>
@@ -87,6 +113,11 @@
                 <div class="form__input--text">
                     <input type="text" class="form__input--address" name="address">
                 </div>
+                <div class="form__error">
+                    @error('address')
+                    {{ $message }}
+                    @enderror
+                </div>
             </div>
         </div>
         <div class="form__input-example">
@@ -98,7 +129,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="text" class="form__input--building-name" name="building">
+                    <input type="text" class="form__input--building-name" name="building_name">
                 </div>
             </div>
         </div>
@@ -113,6 +144,11 @@
             <div class="form__group-content">
                 <div class="form__input--textarea">
                     <textarea name="opinion"  cols="30" rows="10"></textarea>
+                </div>
+                <div class="form__error">
+                    @error('opinion')
+                    {{ $message }}
+                    @enderror
                 </div>
             </div>
         </div>

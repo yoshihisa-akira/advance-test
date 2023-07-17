@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+<?php print_r($contact) ?>
 <div class="confirm__content">
     <div class="confirm__heading">
         <h2>内容確認</h2>
@@ -17,8 +18,8 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--name">
-                    <input class="form__input--last-name" type="text" name="lastName" value="{{ $contact['lastName'] }}" readonly>
-                    <input class="form__input--first-name" type="text" name="first-name" value="{{ $contact['firstName'] }}" readonly>
+                    <input class="form__input--last-name" type="text" name="fullName" value="{{ $contact['fullName'] }}" readonly>
+                    <input class="form__input--first-name" type="text" name="fullName" value="" readonly>
                 </div>
             </div>
         </div>
@@ -48,7 +49,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="text" name="post" value="{{ $contact ['post'] }}" readonly>
+                    <input type="text" name="postcode" value="{{ $contact ['postcode'] }}" readonly>
                 </div>
             </div>
         </div>
@@ -59,6 +60,16 @@
             <div class="form__group-content">
                 <div class="form__input--text">
                     <input type="text" name="address" value="{{ $contact ['address'] }}" readonly>
+                </div>
+            </div>
+        </div>
+        <div class="form__group">
+            <div class="form__group-title">
+                <span class="form__label--item">建物名</span>
+            </div>
+            <div class="form__group-content">
+                <div class="form__input--text">
+                    <input type="text" name="building_name" value="{{ $contact ['building_name'] }}">
                 </div>
             </div>
         </div>
@@ -75,6 +86,9 @@
         <div class="form__button">
             <button class="form__button-submit" type="submit">送信</button>
         </div>
+    </form>
+    <form class="form" action="/fix" method="post">
+        @csrf
         <div class="form__button--fix">
             <button class="form__button-submit--fix" type="submit">修正する</button>
         </div>

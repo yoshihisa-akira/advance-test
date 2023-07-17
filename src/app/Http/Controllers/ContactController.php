@@ -12,12 +12,19 @@ class ContactController extends Controller
 
     public function confirm(ContactRequest $request)
     {
-        $contact = $request->only(['lastName','firstName', 'gender', 'email', 'post', 'address', 'building', 'opinion']);
+        $contact = $request->only(['fullName', 'lastName', 'firstName', 'gender', 'email', 'postcode', 'address', 'building_name', 'opinion']);
+        $contact['fullName'] = $contact['lastName'] . $contact['firstName'];
         return view('confirm', ['contact' => $contact]);
     }
 
-    public function store()
+    public function store(Request $request)
     {
+        $contact = $request->only(['fullName', 'lastName', 'firstName', 'gender', 'email', 'postcode', 'address', 'building_name', 'opinion']);
         return view('thanks');
+    }
+
+    public function fix()
+    {
+        return view('index');
     }
 }

@@ -14,7 +14,14 @@ class CreateContactsTable extends Migration
     public function up()
     {
         Schema::create('contacts', function (Blueprint $table) {
-            $table->id();
+            $table->id()->unsigned();
+            $table->string('fullName');
+            $table->tinyInteger('gender')->comment('1:男性、2:女性');
+            $table->string('email');
+            $table->char('postcode', 8);
+            $table->string('address');
+            $table->string('building_name')->nullable();
+            $table->text('opinion');
             $table->timestamps();
         });
     }

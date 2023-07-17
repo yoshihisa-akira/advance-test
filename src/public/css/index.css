@@ -48,7 +48,6 @@
 .form__input-example {
     color: #ddd;
     margin-bottom: 20px;
-    padding: 0px;
     text-align: left;
 }
 
@@ -242,12 +241,21 @@
     width: 150px;
 }
 
+.form__error--name{
+    display: flex;
+}
 
+.form__error--lastName{
+    background-color: aquamarine;
+    margin-right: 13px;
+    width: 250px;
+}
+
+.form__error--firstName{
+    background-color: aquamarine;
+    width: 250px;
+}
 
 .form__error{
     background-color: aqua;
-}
-
-.test{
-    background-color: aquamarine;
 }
