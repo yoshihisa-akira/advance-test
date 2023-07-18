@@ -35,4 +35,7 @@ building_name:varchar(255)
 opinion:text NOT NULL
 created_at:timestamp
 updated_at:timestamp
+ダミーデータを用意することが出来ませんでした。
 
+管理システムについて
+見た目しか作成出来ておらず機能を搭載することは出来ませんでした。
