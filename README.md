@@ -17,3 +17,22 @@ laravelの既存validationを使用しました。
 郵便番号を打つと住所に反映される機能を実装できませんでした。
 ご意見は入力文字数が120文字以内になるように制限しました。
 確認ボタンを押すと内容確認ページに遷移します。
+
+内容確認ページについて
+修正するというリンクを押すとお問い合わせページに戻すようにしました。
+その際の入力データの保存機能は実装出来ませんでした。
+送信ボタンを押すとサンクスページに遷移します。
+
+お問い合わせ内容はcontactsテーブルに保存します。
+contactsテーブル
+id:bigint unsigned PRIMARY KEY
+fullName:varchar(255) NOT NULL
+gender:tinyint NOT NULL(1:男性 2:女性)
+email:varchar(255)NOT NULL
+postcode:char(8) NOT NULL
+address:varchar(255)NOT NULL
+building_name:varchar(255)
+opinion:text NOT NULL
+created_at:timestamp
+updated_at:timestamp
+
